@@ -1,8 +1,62 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.io.File;
+import java.io.IOException;
 
 public class PolicyDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException
+     {
         Scanner keyboard = new Scanner(System.in);
+        
+        //declare variables
+        String policyNumber;
+        String providerName;
+        String firstName;
+        String lastName;
+        int age;
+        String smokingStatus;
+        double height;
+        double weight;
+        int numSmokers = 0;
+
+        //store policy objects
+        ArrayList<Policy> policyList = new ArrayList<Policy>();
+      
+        //create and open the file
+        File file = new File("PolicyInformation.txt");
+        Scanner inputFile = new Scanner(file);
+      
+        //process all information 
+        while(inputFile.hasNext())
+        {
+      
+         policyNumber = inputFile.nextLine();
+         providerName = inputFile.nextLine();
+         firstName = inputFile.nextLine();
+         lastName = inputFile.nextLine();
+         age = inputFile.nextInt();
+         inputFile.nextLine();
+         smokingStatus = inputFile.nextLine();
+         height = inputFile.nextDouble();
+         weight = inputFile.nextDouble();
+         
+         
+         if(inputFile.hasNext())
+            inputFile.nextLine();
+         if(inputFile.hasNext())
+            inputFile.nextLine();
+            
+         //create a policy object
+         policyList.add(new Policy(policyNumber, providerName, firstName, lastName, age, smokingStatus, height, weight));
+      
+      }
+      
+      //print out information about each Policy object
+      for(Policy policy : policyList)
+      {
+           System.out.println(policy); 
+      { 
+
 
         System.out.print("Please enter the Policy Number: ");
         int policyNumber = keyboard.nextInt();
