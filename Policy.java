@@ -1,9 +1,6 @@
 import java.util.Scanner;
 //caleb nix
 
-/**
- * Policy class represents an insurance policy, which holds information about the policyholder 
- */
 public class Policy 
 {
     
@@ -16,10 +13,7 @@ public class Policy
     private double height;
     private double weight;
     private static int numberOfPolicies = 0; 
-    /**
-    * Policy object with default values
-    */
-    //no-arg constructor 
+   
     public Policy() 
     {
         this.policyNumber = 0;
@@ -31,17 +25,7 @@ public class Policy
         this.height = 0.0;
         this.weight = 0.0;
     }
-    /**
-    * Constructs
-    * @param policyNumber the policy number
-    * @param providerName the name of insurance provider
-    * @param firstName the first name of policy holder
-    * @param lastName the last name of policy holder
-    * @param age the age of policy holder
-    * @param smokingStatus the smoking status of policy holder
-    * @param height the height of policyholder
-    * @param weight the weight of policyholder
-    */
+    
     //constructor with arguments
     public Policy(int policyNumber, String providerName, String firstName, String lastName,
                            int age, String smokingStatus, double height, double weight)
@@ -60,149 +44,94 @@ public class Policy
     {
         return numberOfPolicies;
         }
-    /**
-    * Rtrieves the poliicy number
-    * @return the policy number
-    */
+  
     //setters and getters
     public int getPolicyNumber() 
     {
         return policyNumber;
     }
-    /** 
-    * Sets the policy number
-    * @param policyNumber the policy number to set
-    */
+   
     public void setPolicyNumber(int policyNumber)
     {
         this.policyNumber = policyNumber;
     }
-    /**
-    * Retrieves the provider number
-    * @return the insurance provider name
-    */
+
     public String getProviderName() 
     {
         return providerName;
     }
-    /** 
-    * Sets the provider
-    * @param providerName the insurance provider name to set
-    */
+    
     public void setProviderName(String providerName) 
     {
         this.providerName = providerName;
     }
-    /**
-    * Retrieves the first name
-    * @return the first name
-    */
+    
     public String getFirstName() 
     {
         return firstName;
     }
-    /** 
-    * Sets the first name
-    * @param firstName the first name to set
-    */
+   
     public void setFirstName(String firstName) 
     {
         this.firstName = firstName;
     }
-    /**
-    * Retrieves the last name
-    * @return the last name
-    */
+    
     public String getLastName() 
     {
         return lastName;
     }
-    /** 
-    * Sets the last name
-    * @param lastName the last name of policy holder to set
-    */
-
+    
     public void setLastName(String lastName) 
     {
         this.lastName = lastName;
     }
-    /**
-    * Retrieves the age 
-    * @return the age of policy holder 
-    */
+    
     public int getAge() 
     {
         return age;
     }
-    /** 
-    * Sets the age
-    * @param age the age of policy holder to set
-    */
+   
     public void setAge(int age) 
     {
         this.age = age;
     }
-    /**
-    * Retrieves the smoking status
-    * @return the smoking status of policy holder
-    */
+    
     public String getSmokingStatus() 
     {
         return smokingStatus;
     }
-    /** 
-    * Sets the smoking status
-    * @param smokingStatus the smoking status of policy holder to set
-    */
+    
     public void setSmokingStatus(String smokingStatus) 
     {
         this.smokingStatus = smokingStatus;
     }
-    /**
-    * Retrieves the height
-    * @return the height of policy holder
-    */
+    
     public double getHeight()
     {
         return height;
     }
-    /** 
-    * Sets the height
-    * @param height the height of policy holder to set 
-    */
+    
     public void setHeight(double height) 
     {
         this.height = height;
     }
-    /**
-    * Retrieves the weight
-    * @return the weight of policy holder 
-    */
+    
     public double getWeight() 
     {
         return weight;
     }
-    /** 
-    * Sets the weight
-    * @param weight the weight of policy holder to set
-    */
+    
     public void setWeight(double weight) 
     {
         this.weight = weight;
     }
-    /**
-    * Calculates the BMI of the policy holder
-    * @return the BMI of policyholder
-    */
+   
     //method calculating BMI
     public double calculateBMI() 
     {
         return (weight * 703) / (height * height);
     }
-    /**
-    * Calculates the price of the policy
-    * @return the price of the policy
-    */
+    
     //method calculating policy price
     public double calculatePolicyPrice() 
     {
@@ -233,10 +162,7 @@ public class Policy
                 "BMI: " + String.format("%.2f", calculateBMI()) + "\n" +
                 "Policy Price: $" + String.format("%.2f", calculatePolicyPrice());
     }
-
-    /**
-    * Asks for user input and displays the information
-    */
+    
     public static void main(String[] args) 
     {
         Scanner keyboard = new Scanner(System.in);
