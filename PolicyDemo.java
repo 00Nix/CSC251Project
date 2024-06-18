@@ -7,56 +7,6 @@ public class PolicyDemo {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         
-        //declare variables
-        String policyNumber;
-        String providerName;
-        String firstName;
-        String lastName;
-        int age;
-        String smokingStatus;
-        double height;
-        double weight;
-        int numSmokers = 0;
-
-        //store policy objects
-        ArrayList<Policy> policyList = new ArrayList<Policy>();
-      
-        //create and open the file
-        File file = new File("PolicyInformation.txt");
-        Scanner inputFile = new Scanner(file);
-      
-        //process all information 
-        while(inputFile.hasNext())
-        {
-      
-         policyNumber = inputFile.nextLine();
-         providerName = inputFile.nextLine();
-         firstName = inputFile.nextLine();
-         lastName = inputFile.nextLine();
-         age = inputFile.nextInt();
-         inputFile.nextLine();
-         smokingStatus = inputFile.nextLine();
-         height = inputFile.nextDouble();
-         weight = inputFile.nextDouble();
-         
-         //make sure we haven't hit the end of the file before trying to skip the blank line
-         if(inputFile.hasNext())
-            inputFile.nextLine();
-         if(inputFile.hasNext())
-            inputFile.nextLine();
-            
-         //create a Policy object and add it to our ArrayList
-         policyList.add(new Policy(policyNumber, providerName, firstName, lastName, age, smokingStatus, height, weight));
-      
-      }
-      
-      //print out information about each Policy object
-      for(Policy policy : policyList)
-      {
-           System.out.println(policy); 
-      { 
-
-
         System.out.print("Please enter the Policy Number: ");
         int policyNumber = keyboard.nextInt();
         keyboard.nextLine();  
