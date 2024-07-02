@@ -245,7 +245,7 @@ public class Policy
         //user input
         System.out.print("Please enter the Policy Number: ");
         policy.setPolicyNumber(keyboard.nextInt());
-        keyboard.nextLine(); 
+        keyboard.nextLine();
 
         System.out.print("Please enter the Provider Name: ");
         policy.setProviderName(keyboard.nextLine());
