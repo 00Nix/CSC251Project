@@ -55,7 +55,7 @@ public class PolicyDemo {
       for(Policy policy : policyList)
       {
            System.out.println(policy); 
-      { 
+      {
 
 
         System.out.print("Please enter the Policy Number: ");
